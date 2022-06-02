@@ -1,0 +1,75 @@
+{
+    "TelegrammAPI": {
+      "display_name": "API BOTFATHER KEY",
+      "description": "@botfather",
+      "type": "text",
+      "required": true,
+      "visible": true,
+      "secure": false
+    },
+    "FreshdeskAPI": {
+        "display_name": "API FRESHDESK KEY",
+        "description": "check user profile",
+        "type": "text",
+        "required": true,
+        "visible": true,
+        "secure": false
+      },
+    "creatorDomain": {
+      "display_name": "get your's domain",
+      "type": "domain",
+      "required": true,
+      "type_attributes": {
+        "product": "freshdesk"
+      }
+    },
+    "HelloMessage": {
+        "display_name": "Hello message",
+        "description": "write something positivly",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "keyboardINLINE1": {
+        "display_name": "first key on Hello message",
+        "description": "write something positivly",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "keyboardINLINE2": {
+        "display_name": "second key on Hello message",
+        "description": "write something positivly",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "TickedRequest": {
+        "display_name": "What do you want to tell the user when you ask for a ticket?",
+        "description": "Variables just be there, i'm worked, don't worry.",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "TickedAccepted": {
+      "display_name": "What are you send users, when ticket accepted?",
+      "description": "Variables just be there, i'm worked, don't worry.",
+      "type":"text",
+      "required":true,
+      "visible":true
+  },
+    "TickedClosed": {
+        "display_name": "What are you send users, when ticket closed/resolved?",
+        "description": "Variables just be there, i'm worked, don't worry.",
+        "type":"text",
+        "required":true,
+        "visible":true
+    },
+    "TickedRate": {
+        "display_name": "What are you send users, when ticket must be rated?",
+        "description": "Variables just be there, i'm worked, don't worry.",
+        "type":"text",
+        "required":true,
+        "visible":true
+    }
+  }

@@ -1,0 +1,27 @@
+{
+  "platform-version": "2.2",
+  "product": {
+    "freshdesk": {
+      "events": {
+        "onAppInstall": {
+          "handler": "onAppInstallHandler"
+        },
+        "onExternalEvent": {
+          "handler": "onExternalEventHandler"
+        },
+        "onAppUninstall": {
+          "handler": "onAppUninstallHandler"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "grammy": "1.8.0",
+    "nodejs-base64": "2.0.0"
+  },
+  "whitelisted-domains": ["https://examussandbox.freshdesk.com"],
+  "engines": {
+    "node": "14.17.3",
+    "fdk": "8.3.0"
+  }
+}
