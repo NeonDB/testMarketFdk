@@ -55,7 +55,7 @@ exports = {
 
   onExternalEventHandler: function (data) {
     const apibase64 = base64encode(args.iparams.FreshdeskAPI);
-    const { Bot, Keyboard } = require('grammy');
+    const { Bot, InlineKeyboard } = require('grammy');
     const bot = new Bot(data.iparams.TelegrammAPI, {
       client: {
         canUseWebhookReply: (method) => method === "sendChatAction",
@@ -66,9 +66,9 @@ exports = {
     console.log("External event, got some data: ", data.data.message)
     console.log("External event, got some data: ", data.data.message.from)
     console.log("External event, got some data: ", data);
-    let hellokeyboard = new Keyboard()
-      .text(data.iparams.keyboardINLINE1)
-      .text(data.iparams.keyboardINLINE2)
+    let hellokeyboard = new InlineKeyboard()
+      .text(data.iparams.keyboardINLINE1, "any data")
+      .text(data.iparams.keyboardINLINE2, "any data")
 
     /**
      * Проверка на левую херню
@@ -129,21 +129,21 @@ exports = {
       const url = `https://${data.iparams.creatorDomain}.freshdesk.com/api/v2/groups`;
       console.log("create new URL & options for $request : ", url)
       console.log(options)
-      let fieldname_key = {}
-      $request.get("URL", options)
-        .then(
-          function (data) {
-            //handle "data"
-            //"data" is a json string with status, headers, and response.
-            fieldname_key = data;
-            console.log("REsponse data : ",data)
-            console.log("Fieldnamekey data : ",fieldname_key)
-          },
-          function (error) {
-            //handle failure
-            console.log("error ", error)
-          }
-        );
+      // let fieldname_key = {}
+      // $request.get("URL", options)
+      //   .then(
+      //     function (data) {
+      //       //handle "data"
+      //       //"data" is a json string with status, headers, and response.
+      //       fieldname_key = data;
+      //       console.log("REsponse data : ",data)
+      //       console.log("Fieldnamekey data : ",fieldname_key)
+      //     },
+      //     function (error) {
+      //       //handle failure
+      //       console.log("error ", error)
+      //     }
+      //   );
       // $request.get(url, options)
       // .then(data => data.JSON())
       // .then(data => {
